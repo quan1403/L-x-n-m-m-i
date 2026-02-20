@@ -34,10 +34,8 @@
             transition: 0.3s;
         }
 
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-            color: #666;
+        button:hover {
+            background-color: #ffe6e6;
         }
     </style>
 </head>
@@ -45,46 +43,28 @@
 
     <h1>🎁 LÌ XÌ MAY MẮN 🎁</h1>
     <div id="result">Nhấn để nhận lì xì</div>
-    <button id="btn" onclick="randomLiXi()">Mở Lì Xì</button>
+    <button onclick="randomLiXi()">Mở Lì Xì</button>
 
     <script>
-        // Kiểm tra nếu đã mở rồi
-        //window.onload = function() {
-           // if (localStorage.getItem("liXiOpened")) {
-             //   let savedAmount = localStorage.getItem("liXiAmount");
-             //   document.getElementById("result").innerHTML =
-             //       "Bạn đã mở rồi: " + parseInt(savedAmount).toLocaleString("vi-VN") + " đ";
-             //   document.getElementById("btn").disabled = true;
-           // }
-      // };
-
         function randomLiXi() {
-            if (localStorage.getItem("liXiOpened")) return;
-
             let rand = Math.random() * 100;
             let amount = 0;
 
-            if (rand < 45) {
-                amount = 20000;
-            } else if (rand < 65) {
-                amount = 40000;
+            if (rand < 50) {
+                amount = 20000;      // 50%
             } else if (rand < 80) {
-                amount = 60000;
-            } else if (rand < 92) {
-                amount = 80000;
+                amount = 40000;      // 30%
+            } else if (rand < 94) {
+                amount = 60000;      // 14%
+            } else if (rand < 99) {
+                amount = 80000;      // 5%
             } else {
-                amount = 100000;
+                amount = 100000;     // 1%
             }
 
             document.getElementById("result").innerHTML =
                 amount.toLocaleString("vi-VN") + " đ";
-
-            // Lưu trạng thái
-         //   localStorage.setItem("liXiOpened", "true");
-           // localStorage.setItem("liXiAmount", amount);
-
-          //  document.getElementById("btn").disabled = true;
-       // }
+        }
     </script>
 
 </body>
