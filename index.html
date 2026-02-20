@@ -49,14 +49,14 @@
 
     <script>
         // Kiểm tra nếu đã mở rồi
-     //   window.onload = function() {
-           // if (localStorage.getItem("liXiOpened")) {
-            //    let savedAmount = localStorage.getItem("liXiAmount");
-            //    document.getElementById("result").innerHTML =
-              //      "Khôn thế mở 1 lần thôi =)): " + parseInt(savedAmount).toLocaleString("vi-VN") + " đ";
-            //   document.getElementById("btn").disabled = true;
-         //  }
-//};
+      window.onload = function() {
+            if (localStorage.getItem("liXiOpened")) {
+                let savedAmount = localStorage.getItem("liXiAmount");
+               document.getElementById("result").innerHTML =
+                    "Khôn thế mở 1 lần thôi =)): " + parseInt(savedAmount).toLocaleString("vi-VN") + " đ";
+               document.getElementById("btn").disabled = true;
+           }
+};
 
         function randomLiXi() {
             if (localStorage.getItem("liXiOpened")) return;
