@@ -49,14 +49,14 @@
 
     <script>
         // Kiểm tra nếu đã mở rồi
-        window.onload = function() {
-            if (localStorage.getItem("liXiOpened")) {
-                let savedAmount = localStorage.getItem("liXiAmount");
-                document.getElementById("result").innerHTML =
-                    "Bạn đã mở rồi: " + parseInt(savedAmount).toLocaleString("vi-VN") + " đ";
-               document.getElementById("btn").disabled = true;
-           }
-       };
+     //   window.onload = function() {
+           // if (localStorage.getItem("liXiOpened")) {
+            //    let savedAmount = localStorage.getItem("liXiAmount");
+            //    document.getElementById("result").innerHTML =
+              //      "Khôn thế mở 1 lần thôi =)): " + parseInt(savedAmount).toLocaleString("vi-VN") + " đ";
+            //   document.getElementById("btn").disabled = true;
+         //  }
+//};
 
         function randomLiXi() {
             if (localStorage.getItem("liXiOpened")) return;
@@ -80,11 +80,11 @@
                 amount.toLocaleString("vi-VN") + " đ";
 
             // Lưu trạng thái
-            localStorage.setItem("liXiOpened", "true");
-            localStorage.setItem("liXiAmount", amount);
+           // localStorage.setItem("liXiOpened", "true");
+            //localStorage.setItem("liXiAmount", amount);
 
-            document.getElementById("btn").disabled = true;
-       }
+            //document.getElementById("btn").disabled = true;
+       //}
     </script>
 
 </body>
